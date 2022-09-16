@@ -17,8 +17,10 @@ const LineChartData = () => {
   const oils = america?.filter((a) => a.topic === "oil");
   const oil = oils?.splice(10, 20)?.map((o) => o);
   return (
-    <div>
-      <h5 className="text-xl">Country: United States of America - Oil graph</h5>
+    <div className="mt-40">
+      <h5 className="text-xl text-center text-teal-500 font-bold mb-5">
+        Country: United States of America - Oil graph
+      </h5>
       <LineChart
         width={1100}
         height={300}

@@ -18,20 +18,20 @@ const BarChartData = () => {
   const exports = america?.filter((ex) => ex.topic === "oil");
   const exportData = exports?.splice(10, 20)?.map((e) => e);
   return (
-    <div>
-      <h5 className="text-xl">
+    <div className="my-10">
+      <h5 className="text-xl text-center text-teal-500 font-bold mb-5">
         Country: United States of America - Export graph
       </h5>
-        <BarChart width={1100} height={350} data={exportData}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="pestle" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="intensity" fill="#8884d8" />
-          <Bar dataKey="likelihood" fill="#82ca9d" />
-          <Bar dataKey="relevance" fill="#9e4fe3" />
-        </BarChart>
+      <BarChart width={1100} height={350} data={exportData}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="pestle" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="intensity" fill="#8884d8" />
+        <Bar dataKey="likelihood" fill="#82ca9d" />
+        <Bar dataKey="relevance" fill="#9e4fe3" />
+      </BarChart>
     </div>
   );
 };
